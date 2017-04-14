@@ -1,0 +1,21 @@
+#задача на http://codeforces.com/problemset/problem/112/A
+word1 = input()
+word2 = input()
+f = [0,'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+word1=word1.lower()
+word2=word2.lower()
+l = len(word1)
+j = len(word2)
+k_1 = 0
+k_2 = 0
+for d in range (0,l):
+	for i in range (0,28):
+		if word1[d] == f[i]:
+			k_1 = k_1 + i
+			break
+for h in range (0,j):
+	for m in range (0,28):
+		if word2[h] == f[m]:
+			k_2 = k_2 + m
+			break
+print (k_1 - k_2)
